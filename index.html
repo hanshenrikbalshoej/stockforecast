@@ -1,7 +1,9 @@
-<html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NASDAQ Forecaster</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hans Henriks NASDAQ Forecaster</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -107,19 +109,19 @@
 <body>
 <div class="app">
   <div class="header">
-    <h1>📈 NASDAQ Forecaster</h1>
+    <h1>📈 Hans Henriks NASDAQ Forecaster</h1>
     <p>Live prices · Bull, Bear &amp; Base scenarios · AI analytics</p>
   </div>
 
   <!-- API key bar -->
   <div class="key-bar">
     <label>API Key:</label>
-    <input type="text" id="apiKeyInput" placeholder="DEMO_KEY  (or paste your free key)" value="DEMO_KEY">
+    <input type="text" id="apiKeyInput" placeholder="DEMO_KEY  (or paste your free key)" value="DEMO_KEY" />
     <a href="https://www.alphavantage.co/support/#api-key" target="_blank">Get free key ↗</a>
   </div>
 
   <div class="search-row">
-    <input type="text" id="tickerInput" placeholder="Enter ticker (e.g. AAPL, TSLA, NVDA)" maxlength="10">
+    <input type="text" id="tickerInput" placeholder="Enter ticker (e.g. AAPL, TSLA, NVDA)" maxlength="10" />
     <button id="searchBtn" onclick="fetchStock()">Analyse</button>
   </div>
 
@@ -260,7 +262,7 @@ async function fetchStock() {
   btn.textContent = 'Analyse';
 }
 
-/* ─── Maths  ─── */
+/* ─── Maths ─── */
 function calcVolatility(closes) {
   if (closes.length < 2) return 0.02;
   const returns = [];
@@ -474,6 +476,5 @@ function switchHorizon(h) {
   if (currentData) generateForecastAndRender(currentData);
 }
 </script>
-
-
-</body></html>
+</body>
+</html>
